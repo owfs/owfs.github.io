@@ -15,7 +15,9 @@
     <div class="wrapper">
       <header>
         <h1>OWFS - 1-Wire File System</h1>
-        {% for page in site.pages %}
+
+        {% assign weighted_pages = site.pages | sort:"weight"  %}
+        {% for page in weighted_pages %}
           <p class="view"><a href="{{page.url}}">{{page.title}}</a></p>
         {% endfor %}
         <p class="view"><a href="https://github.com/owfs/owfs">Browse code</a></p>
@@ -25,6 +27,8 @@
       </section>
       <footer>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        <small>Page rendered: {{site.time}}</small>
+        <small>Contribute to this site? Go ahead and  <a href="https://github.com/owfs/owfs.github.io">fork it</a>, and create a pull request</p></small>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>

@@ -1,6 +1,7 @@
 ---
 title: Contribute
 permalink: contribute
+weight: 20
 ---
 ## Contribute
 

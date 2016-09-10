@@ -1,5 +1,6 @@
 ---
 title: Welcome
+weight: 100
 ---
 ## Welcome
 
