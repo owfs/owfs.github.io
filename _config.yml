@@ -1,0 +1,7 @@
+defaults:
+  -
+    scope:
+      path: "" # Match all files
+    values:
+      layout: "default"
+      
