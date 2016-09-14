@@ -3,18 +3,19 @@
 topnav:
 - title: Topnav
   items:
-    - title: Welcome
-      url: /index
+    - title: News
+      url: /news
+
+    - title: User Wiki
+      external_url: https://github.com/owfs/owfs-doc/wiki
 
 #Topnav dropdowns
 topnav_dropdowns:
 - title: Topnav dropdowns
   folders:
-    - title: Github Resources
+    - title: Developer Resources
       folderitems:
         - title: Github Repo
           external_url: https://github.com/owfs/owfs
         - title: Github Isssue tracker
           external_url: https://github.com/owfs/owfs/issues
-        - title: Github Wiki
-          external_url: https://github.com/owfs/owfs-doc/wiki
