@@ -1,7 +1,9 @@
 ---
-title: Contribute
-permalink: contribute
-weight: 100
+title: 1-Wire
+keywords: owfs contribute
+tags: [contribute]
+sidebar: home_sidebar
+permalink: contribute.html
 ---
 ## Contribute
 

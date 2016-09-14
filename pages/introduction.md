@@ -1,7 +1,8 @@
 ---
-title: Introduction
-permalink: introduction
-weight: 10
+title: 1-Wire introduction
+keywords: owfs introduction
+sidebar: home_sidebar
+permalink: introduction.html
 ---
 ## OWFS?
 

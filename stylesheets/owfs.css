@@ -1,0 +1,12 @@
+
+.inner {
+    max-width: 800px;
+}
+
+#header_wrap.frontpage .inner {
+
+}
+
+#header_wrap .inner {
+    padding: 10px 10px 30px 10px;
+}

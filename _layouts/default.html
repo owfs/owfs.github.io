@@ -1,36 +1,80 @@
----
----
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-		<title>1-Wire File System - {{ page.title }}</title>
+<!DOCTYPE html>
+<head>
+    {% include head.html %}
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width">
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>OWFS - 1-Wire File System</h1>
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
 
-        {% assign weighted_pages = site.pages | sort:"weight"  %}
-        {% for page in weighted_pages %}
-          <p class="view"><a href="{{page.url}}">{{page.title}}</a></p>
-        {% endfor %}
-        <p class="view"><a href="https://github.com/owfs/owfs">Browse code</a></p>
-      </header>
-      <section>
-{{content}}
-      </section>
-      <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-        <small>Page rendered: {{site.time}}</small>
-        <small>Contribute to this site? Go ahead and  <a href="https://github.com/owfs/owfs.github.io">fork it</a>, and create a pull request</p></small>
-      </footer>
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    {% if page.datatable == true %}
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.5/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.5/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $('table.datatable').DataTable( {
+                        paging: false,
+                        stateSave: true
+                    }
+            );
+    </script>
+    {% endif %}
+
+</head>
+<body>
+{% include topnav.html %}
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          {% include sidebar.html %}
+    <!-- Content Column -->
+    <div class="col-md-9">
+        {{content}}
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-  </body>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+{% if site.google_analytics %}
+{% include google_analytics.html %}
+{% endif %}
 </html>
