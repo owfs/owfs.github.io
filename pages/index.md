@@ -8,6 +8,6 @@ permalink: index.html
 
 This page is a test of Jekyll and Github Pages. <a target="_blank" href="http://idratherbewriting.com/documentation-theme-jekyll">With the Jekyll Documentation Theme!</a>
 
-Will owfs move here? Yes, we're in the process of doing that.
+There is no actual page here yet, for the old page, please see https://web.archive.org/web/20190405231200/http://owfs.org/
 
-For now we're still on <a target="_blank" href="https://sourceforge.net/projects/owfs/">sourceforge.net/projects/owfs/</a>
+For the sourcecode, please see https://github.com/owfs/owfs
